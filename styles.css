@@ -8,11 +8,22 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    width: 100%; /* Full width of the parent */
+    height: 100vh; /* Full height of the viewport */
+    font-size: 1rem; /* Relative font size */
+}
+
+
+
+
+.element {
+    width: 50%; /* 50% of the parent's width */
 }
 
 .container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
+    max-width: 1200px;
 }
 
 /* Navbar */
