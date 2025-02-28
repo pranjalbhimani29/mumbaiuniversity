@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Mumbai University</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./departments.html">Departments</a></li>
+                <li><a href="./campus.html">Campus Life</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Us Section -->
+    <section class="contact">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>If you have any queries, please feel free to reach out to us. We would be happy to assist you!</p>
+            
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h2>Our Contact Details</h2>
+                <p><strong>University Address:</strong> <br>
+                    Mumbai University, Kalina Campus, Vidyanagari, Santacruz East, Mumbai - 400098, India
+                </p>
+                <p><strong>Email:</strong> <br> 
+                    <a href="mailto:info@mumbaiuniversity.edu">info@mumbaiuniversity.edu</a>
+                </p>
+                <p><strong>Phone:</strong> <br> 
+                    +91 22 2654 1234
+                </p>
+            </div>
+
+            <!-- Google Maps -->
+            <div class="map">
+                <h2>Find Us on the Map</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.4100769536987!2d72.87038071491713!3d19.05644538709172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c7cd0790a0b5%3A0x9533e383b6adcd18!2sUniversity%20of%20Mumbai!5e0!3m2!1sen!2sin!4v1630140489145!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <!-- Contact Form -->
+            <h2>Submit Your Query</h2>
+            <form id="contact-form" action="#" method="POST">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+
+                <label for="query">Your Query</label>
+                <textarea id="query" name="query" rows="4" required placeholder="Type your query here..."></textarea>
+
+                <button type="submit">Submit Query</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mumbai University. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
