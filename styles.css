@@ -4,17 +4,13 @@
 /* Base Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #e3f2fd; /* Light pastel blue for all pages */
+    background-color: #e3f2fd;
     color: #333;
     margin: 0;
     padding: 0;
-    width: 100%; /* Full width of the parent */
-    height: 100vh; /* Full height of the viewport */
-    font-size: 1rem; /* Relative font size */
-}
-
-.element {
-    width: 50%; /* 50% of the parent's width */
+    width: 100%;
+    height: 100vh;
+    font-size: 1rem;
 }
 
 .container {
@@ -32,11 +28,13 @@ nav {
 
 nav ul {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 30px;
+    display: inline-block;
+    margin-right: 20px;
 }
 
 nav ul li a {
@@ -55,14 +53,14 @@ nav ul li a:hover {
 header.hero {
     background-color: #1976d2;
     color: white;
-    padding: 100px 0;
+    padding: 80px 20px;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 3.5rem; /* Larger heading size */
-    font-weight: 600; /* Bold weight for impact */
-    font-family: 'Poppins', sans-serif; /* Heading font */
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
 }
 
 .hero p {
@@ -70,90 +68,43 @@ header.hero {
 }
 
 /* About Section */
-.about {
-    padding: 50px 0;
-    background-color: #e3f2fd; /* Light blue background */
+.about, .departments, .campus-life, .contact {
+    padding: 50px 20px;
+    background-color: #e3f2fd;
+    text-align: center;
 }
 
-.about h1 {
-    font-size: 2.5rem; /* Slightly larger heading */
+.about h1, .campus-life h1, .contact h1 {
+    font-size: 2.5rem;
     margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif; /* Heading font */
-}
-
-.about-details h3 {
-    font-size: 1.5rem;
-    margin-top: 20px;
     font-family: 'Poppins', sans-serif;
-}
-
-/* Departments Section */
-.departments {
-    padding: 50px 0;
-    background-color: #e3f2fd; /* Light blue background */
 }
 
 .department-cards {
     display: flex;
-    justify-content: space-evenly; /* Distribute the cards evenly across the screen */
-    flex-wrap: wrap; /* Allow wrapping to the next line */
-    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
 }
 
 .department-card {
     background-color: #ffffff;
     border-radius: 10px;
     padding: 20px;
-    width: 30%; /* Each card takes up 1/3 of the width */
+    width: 100%;
+    max-width: 350px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 10px; /* Small margin between the cards */
     transition: transform 0.3s ease;
 }
 
 .department-card:hover {
-    transform: translateY(-5px); /* Add slight lift effect on hover */
-}
-
-.department-card h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.department-card ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.department-card ul li {
-    margin-bottom: 10px;
-}
-
-.department-card p {
-    font-weight: bold;
+    transform: translateY(-5px);
 }
 
 /* Campus Life */
-.campus-life {
-    padding: 50px 0;
-    background-color: #e3f2fd; /* Light blue background */
-}
-
-.campus-life h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.campus-life h3 {
-    font-size: 1.5rem;
-    margin-top: 20px;
-    font-family: 'Poppins', sans-serif;
-}
-
 .facility-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
@@ -165,51 +116,12 @@ header.hero {
 }
 
 /* Contact Section */
-.contact {
-    padding: 50px 0;
-    background-color: #e3f2fd; /* Light blue background */
-}
-
-.contact h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-}
-
-.contact p {
-    text-align: center;
-    font-size: 1.1rem;
-    margin-bottom: 40px;
-}
-
-/* Contact Info */
-.contact-info {
+.contact-info, form {
     background-color: #ffffff;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
-}
-
-.contact-info h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.contact-info p {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-}
-
-.contact-info a {
-    color: #1e3a8a;
-    text-decoration: none;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
 }
 
 /* Google Maps */
@@ -222,21 +134,13 @@ header.hero {
 }
 
 /* Contact Form */
-form {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 form label {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
 }
 
-form input,
-form textarea {
+form input, form textarea {
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
@@ -276,85 +180,41 @@ footer p {
     margin: 0;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 1200px) {
-    .department-card {
-        width: 45%; /* Adjust card width for medium screens */
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
     }
 }
 
 @media (max-width: 768px) {
-    .department-card {
-        width: 100%; /* Full width for small screens */
-    }
-
-    .facility-grid {
-        grid-template-columns: 1fr; /* Single column layout */
-    }
-
     .hero h1 {
-        font-size: 2.5rem; /* Smaller heading size */
+        font-size: 2rem;
     }
-
-    .hero p {
-        font-size: 1rem; /* Smaller paragraph size */
+    .department-cards {
+        flex-direction: column;
+        align-items: center;
     }
-
-    .contact h1 {
-        font-size: 2.5rem; /* Smaller heading size */
-    }
-
-    .contact p {
-        font-size: 1rem; /* Smaller paragraph size */
-    }
-
-    form button {
-        font-size: 1rem; /* Smaller button size */
+    .facility-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
 
 @media (max-width: 480px) {
-    nav ul li {
-        margin-right: 15px; /* Reduce margin for smaller screens */
-    }
-
-    nav ul li a {
-        font-size: 0.9rem; /* Smaller font size for links */
-    }
-
     .hero h1 {
-        font-size: 2rem; /* Further reduce heading size */
+        font-size: 1.8rem;
     }
-
     .hero p {
-        font-size: 0.9rem; /* Further reduce paragraph size */
+        font-size: 0.9rem;
     }
-
-    .about h1,
-    .campus-life h1,
-    .contact-info h2 {
-        font-size: 2rem; /* Smaller heading size */
-    }
-
-    .about-details h3,
-    .campus-life h3 {
-        font-size: 1.2rem; /* Smaller subheading size */
-    }
-
-    .department-card h2 {
-        font-size: 1.5rem; /* Smaller card heading size */
-    }
-
-    .contact-info p {
-        font-size: 0.9rem; /* Smaller paragraph size */
-    }
-
-    form input,
-    form textarea {
-        font-size: 0.9rem; /* Smaller input and textarea font size */
-    }
-
-    form button {
-        padding: 10px 15px; /* Smaller button padding */
+    .contact-info, form {
+        padding: 20px;
     }
 }
